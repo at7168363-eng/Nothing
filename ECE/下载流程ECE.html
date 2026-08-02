@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+  <body>
+    <a
+      href="https://at7168363-eng.github.io/Nothing/kn.mobileconfig"
+      target="_blank"
+      rel="noopener"
+      >1. Install DNS profile</a
+    >
+    <br />
+    <a
+      href="itms-services://?action=download-manifest&url=https://at7168363-eng.github.io/Nothing/cn.plist"
+      target="_blank"
+      rel="noopener"
+      >2. Download ESign</a
+    >
+  </body>
+</html>
+
+<!--
+itms-services://?action=download-manifest&url=https://website.khoindvn.io.vn/plists/xxxx.plist
+
+https://website.khoindvn.io.vn/apps.js
+(function() {
+  const allowedDomains = ["khoindvn.io.vn", "website.khoindvn.io.vn", "download.khoindvn.io.vn"];
+  const allowedSuffixes = [".github.io", ".pages.dev"];
+  const currentDomain = window.location.hostname;
+  
+  const isAllowed = allowedDomains.some(domain => currentDomain === domain || currentDomain.endsWith("." + domain))
+    || allowedSuffixes.some(suffix => currentDomain.endsWith(suffix));
+  
+  if (!isAllowed) {
+    console.error("Access denied: This script is only allowed to run on authorized domains");
+    document.body.innerHTML = '<div style="color:red; font-size:20px; text-align:center; margin-top:50px; font-family:sans-serif;">Access Denied: Unauthorized Domain</div>';
+    return;
+  }
+
+  window.apps = {
+  "ksign": [
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/kkugzbzylnta",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Moving Increasingly"
+    },
+    {
+      "name": "KSign Moving V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ujflkezbwkil",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Moving Increasingly"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/abwfjmsxaazh",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "VIETNAM AIRLINES"
+    },
+    {
+      "name": "KSign VN V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/qxrhywzoniku",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "VIETNAM AIRLINES"
+    },
+    {
+      "name": "KSign VN V2",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/codxovtjuixz",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "VIETNAM AIRLINES"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/siftxuciyxpp",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "China Telecom"
+    },
+    {
+      "name": "KSign China V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/bonlkwvysgoz",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "China Telecom"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ezzlgxnckzsf",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Beijing Xibei"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/iougkcqyyuuw",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Luoyang Postal"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/imbirldxzzjn",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Qingdao Rural"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/cnxmbhjxwuot",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Commission Elections"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/tdzyjqdkdynv",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "National Oilwell"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/kvpebiufmvhj",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Beijing Zhizhangyi"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/myjciqgllouw",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Aramco"
+    },
+    {
+      "name": "KSign GLOBAL V2",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/eghnlgwcjsre",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "GLOBAL TAKEOFF,"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/xflootueousx",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "BOC"
+    },
+    {
+      "name": "KSign BOC V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/jjjqpltihrzo",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "BOC"
+    },
+    {
+      "name": "KSign BOC V2",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ihmkihggrcgm",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "BOC"
+    },
+    {
+      "name": "KSign BOC V3",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ijvpvoxadjsv",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "BOC"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/fphbknczfvzs",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "KSign PowerChina V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ibyahvdsjjht",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "KSign PowerChina V2",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/lbwcdqmqtfny",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "KSign PowerChina V3",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/prpykimlxdrw",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "KSign PowerChina V4",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/aeijrmykqqdz",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ddupzcjuhrhq",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Jiangsu Simcere"
+    },
+    {
+      "name": "KSign Jiangsu V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/nurukmbyocwc",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Jiangsu Simcere"
+    },
+    {
+      "name": "KSign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/wwltuwgtdetf",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYlk6oHRX_isIEsA0183yypCcVuMNaseuGzSymQIUY1g&s",
+      "descriptions": "Viet Nam Rubber"
+    }
+  ],
+  "esign": [
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/qachwvhuyyhu",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Moving Increasingly"
+    },
+    {
+      "name": "ESign Moving V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/hvvqlqrnopjg",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Moving Increasingly"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/sbaosefydgcj",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "VIETNAM AIRLINES"
+    },
+    {
+      "name": "ESign VN V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/fjfmgkprisxc",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "VIETNAM AIRLINES"
+    },
+    {
+      "name": "ESign VN V2",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ygatqkzjezoy",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "VIETNAM AIRLINES"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/hbvuxspabnbd",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "China Telecom"
+    },
+    {
+      "name": "ESign China V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/qechumbhdyav",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "China Telecom"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/mtolgfttogzy",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Beijing Xibei"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/hzyomxzxbpya",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Luoyang Postal"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ncpdtsrltlsa",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Qingdao Rural"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ztedomqmdpkd",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Commission Elections"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ulmdzhjvdkys",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "National Oilwell"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/lpmgbvhgkhwm",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Beijing Zhizhangyi"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ybsutbnnwdpi",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Aramco"
+    },
+    {
+      "name": "ESign GLOBAL V2",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/slnvstmdgjpj",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "GLOBAL TAKEOFF,"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/dhspqqovbyih",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "BOC"
+    },
+    {
+      "name": "ESign BOC V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/kletgxdnpyqt",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "BOC"
+    },
+    {
+      "name": "ESign BOC V2",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/vtvbycgsiykn",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "BOC"
+    },
+    {
+      "name": "ESign BOC V2",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/ieyeshyuitgr",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "BOC"
+    },
+    {
+      "name": "ESign BOC V3",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/csapyvatirbn",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "BOC"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/pzhnvokfjykh",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "ESign PowerChina V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/asjxmbtropmh",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "ESign PowerChina V2",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/tukqheostlrd",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "ESign PowerChina V3",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/dazrpfcvscct",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "ESign PowerChina V4",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/bxseehbjvuas",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "PowerChina"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/fcatwyjwiasm",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Jiangsu Simcere"
+    },
+    {
+      "name": "ESign Jiangsu V1",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/jqazbhjbbxom",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Jiangsu Simcere"
+    },
+    {
+      "name": "ESign",
+      "url": "https://khoindvn.io.vn/an-cap-cai-con-cac-suc-vat-dmm/gxnbkbkqihej",
+      "img": "img/pf/profile-pic.png",
+      "descriptions": "Viet Nam Rubber"
+    }
+  ]
+};
+})();
+-->
