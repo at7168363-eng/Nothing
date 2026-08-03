@@ -17,13 +17,16 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>com.esign.khoindvn10</string>
-                <key>bundle-version</key>
-                <string>1.0</string>
-                <key>kind</key>
-                <string>software</string>
-                <key>title</key>
-                <string>KR</string>
+    <string>com.ironhidegames.frontiers</string>
+
+    <key>bundle-version</key>
+    <string>0</string>
+
+    <key>kind</key>
+    <string>software</string>
+
+    <key>title</key>
+    <string>KR Frontiers</string>
             </dict>
         </dict>
     </array>
